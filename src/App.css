@@ -1,24 +1,33 @@
 .App {
   font-family: "Barlow" !important;
   display: flex;
-    flex-direction: column;
-    height: 100vh;
+  flex-direction: column;
+  height: 100vh;
+}
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar {
-  box-shadow: 0px 4px 20px rgb(141, 155, 243, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 70px;
   z-index: 200;
+}
+.navbar-brand {
+  font-weight: bolder;
 }
 
 p {
   line-height: 1.6rem;
 }
-/* .btn {
-  border-radius: 10px;
-  padding: 0.5rem 1rem;
 
-} */
+.text-primary {
+  color: rgb(141, 155, 243) !important;
+}
 .btn-warning {
   box-shadow: 0px 4px 0px rgba(240, 202, 65, 0.3);
   color: #fff;
@@ -26,7 +35,6 @@ p {
 }
 .btn-secondary {
   background-color: #74778d;
-  font-weight: bold;
 }
 textarea {
   border: inherit !important;
@@ -37,6 +45,20 @@ textarea:focus {
   box-shadow: none !important;
   resize: none !important;
 }
+label {
+  color: rgb(141, 155, 243);
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgb(141, 155, 243);
+  outline: 0;
+  box-shadow: inherit;
+}
+
+.article-window{
+  resize: horizontal;
+} 
 .article-title {
   color: rgb(141, 155, 243);
 }
@@ -45,7 +67,8 @@ textarea:focus {
   transition: 0.3s;
 }
 .article-paragraph:hover {
-  color: #74778d;
+  color: #f0ca41;
+  cursor: pointer;
 }
 
 .section-dynamic {
