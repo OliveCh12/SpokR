@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShare} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faShare);
+
 const Typewriter = ({ rows, value, limit, placeholder }) => {
   const [content, setContent] = useState(value);
-
-  const [time, setTime] = useState(0);
 
   const setFormattedContent = text => {
     text.length > limit ? setContent(text.slice(0, limit)) : setContent(text);
@@ -64,8 +68,9 @@ const Typewriter = ({ rows, value, limit, placeholder }) => {
           aria-describedby="button-addon2"
         />
         <div className="input-group-append">
-          <button className="btn btn-warning" type="button" id="button-addon2">
+          <button className="btn btn-warning" type="button" id="button-addon2" style={{width: "150px"}}>
             Submit
+            <FontAwesomeIcon icon="share" className="ml-2"/>
           </button>
         </div>
       </div>
